@@ -14,5 +14,12 @@ module.exports = {
         apiToken: process.env.DATO_API_TOKEN,
       },
     },
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: 'www.incredible.cloud',
+        enableS3StaticWebsiteHosting: false
+      }
+    }
   ],
 }
