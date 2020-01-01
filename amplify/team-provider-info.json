@@ -1,0 +1,15 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-incredible-cloud-dev-161721-authRole",
+            "UnauthRoleArn": "arn:aws:iam::715857882440:role/amplify-incredible-cloud-dev-161721-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::715857882440:role/amplify-incredible-cloud-dev-161721-authRole",
+            "Region": "ap-southeast-2",
+            "DeploymentBucketName": "amplify-incredible-cloud-dev-161721-deployment",
+            "UnauthRoleName": "amplify-incredible-cloud-dev-161721-unauthRole",
+            "StackName": "amplify-incredible-cloud-dev-161721",
+            "StackId": "arn:aws:cloudformation:ap-southeast-2:715857882440:stack/amplify-incredible-cloud-dev-161721/55181780-2931-11ea-8038-0217024b0d4e",
+            "AmplifyAppId": "d1h3hh8rwc4ncb"
+        }
+    }
+}

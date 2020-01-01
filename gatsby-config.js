@@ -1,3 +1,5 @@
+const path = require('path')
+
 require('dotenv').config()
 
 module.exports = {
@@ -8,12 +10,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-transformer-remark`,
-    // {
-    //   resolve: `gatsby-source-datocms`,
-    //   options: {
-    //     apiToken: process.env.DATO_API_TOKEN,
-    //   },
-    // },
     {
       resolve: "gatsby-source-graphql",
       options: {
@@ -30,11 +26,38 @@ module.exports = {
         },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blogs`,
+        path: `${__dirname}/contents/blogs`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `aws`,
+        path: `${__dirname}/contents/aws`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `books`,
+        path: `${__dirname}/contents/books`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-s3`,
       options: {
         bucketName: 'www.incredible.cloud',
         enableS3StaticWebsiteHosting: false
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        defaultLayouts: { default: path.resolve('./src/components/layout.js') },
+      },
+    },
   ],
 }

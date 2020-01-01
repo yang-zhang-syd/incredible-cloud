@@ -1,0 +1,25 @@
+import Img from 'gatsby-image'
+import { graphql } from 'gatsby'
+import Layout from "../components/layout"
+
+# Event details
+
+<h1>{props.data.events.getEvent.name}</h1>
+<p>{props.data.events.getEvent.id}</p>
+<p>{props.data.events.getEvent.when}</p>
+<p>{props.data.events.getEvent.where}</p>
+<p>{props.data.events.getEvent.description}</p>
+
+export const pageQuery = graphql`
+  query MyEvent($id: ID!) {
+    events {
+      getEvent(id: $id) {
+        id
+        name
+        when
+        where
+        description
+      }
+    }
+  }
+`;

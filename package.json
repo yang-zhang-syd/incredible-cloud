@@ -4,9 +4,12 @@
   "version": "1.0.0",
   "author": "Stefano Verna <s.verna@datocms.com>",
   "dependencies": {
+    "@mdx-js/mdx": "^1.5.3",
+    "@mdx-js/react": "^1.5.3",
     "dotenv": "^8.1.0",
     "gatsby": "^2.15.30",
     "gatsby-image": "^2.2.24",
+    "gatsby-plugin-mdx": "^1.0.64",
     "gatsby-plugin-react-helmet": "^3.1.10",
     "gatsby-plugin-s3": "^0.3.2",
     "gatsby-plugin-sass": "^2.1.17",

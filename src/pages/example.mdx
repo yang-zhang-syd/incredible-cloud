@@ -1,0 +1,27 @@
+import { Link, graphql } from "gatsby";
+
+# Hi people
+
+Welcome to your new Gatsby site.
+
+Now go build something great. 
+
+<h1>{props.data.events.getEvent.name}</h1>
+<p>{props.data.events.getEvent.id}</p>
+<p>{props.data.events.getEvent.when}</p>
+<p>{props.data.events.getEvent.where}</p>
+<p>{props.data.events.getEvent.description}</p>
+
+export const pageQuery = graphql`
+  query MyEvents {
+    events {
+      getEvent(id: "07c769c8-5a84-48dc-a76f-ed13b74831ee") {
+        id
+        name
+        when
+        where
+        description
+      }
+    }
+  }
+`;

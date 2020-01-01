@@ -10,12 +10,12 @@ const IndexPage = ({ data }) => (
       {data.events.listEvents.items.map((event, i) => (
         <div key={i} className="showcase__item">
           <figure className="card">
-            <Link to={`/works/${event.name}`} className="card__image">
+            <Link to={`/event/${event.id}`} className="card__image">
               <Img fluid={event.name} />
             </Link>
             <figcaption className="card__caption">
               <h6 className="card__title">
-                <Link to={`/works/${event.name}`}>{event.name}</Link>
+                <Link to={`/event/${event.id}`}>{event.name}</Link>
               </h6>
               <div className="card__description">
               <p>{event.when} {event.where}</p>
