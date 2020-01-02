@@ -9,7 +9,7 @@ categories: tech blogs
 <!--more-->
 To use quartznet with database as the datastore, we need to set the following properties. I have created a [**utility method**](https://github.com/yang-zhang-syd/quartznet-database-demo/blob/master/quartznet-database-demo/Utils.cs) to parse the json configuration file.
 
-{% highlight json %}
+```json
 "Quartz": {
     "quartz.scheduler.instanceName": "DemoScheduler",
     "quartz.scheduler.instanceId": "instance1",
@@ -26,11 +26,11 @@ To use quartznet with database as the datastore, we need to set the following pr
     "quartz.serializer.type": "binary",
     "quartz.dataSource.default.connectionString": "server=localhost;database=quartz;uid=root;pwd=password;SslMode=none"
 }
-{% endhighlight %}
+```
 
 Before creating a job, we need to check if the job was already created before. If the job exists in the datastore, then we need to read it instead of creating a new one. 
 
-{% highlight csharp %}
+```csharp
 var helloJob = await scheduler.GetJobDetail(new JobKey("HelloJob"));
 if (helloJob == null)
 {
@@ -51,7 +51,8 @@ else
 {
     Console.WriteLine("Read HelloJob from datastore!");
 }
-{% endhighlight %}
+```
+<br/>
 
 * It is important to assign a job identity `WithIdentity("HelloJob")` which will be used later to retrieve it from the datastore.
 * When creating a trigger, there are three types of misfire instructions to choose.

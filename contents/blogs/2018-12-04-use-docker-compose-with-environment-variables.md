@@ -10,7 +10,7 @@ We can declare reusable variables inside a docker compose file and pull the valu
 <!--more-->
 Below is from a section of an example `docker-compose.yml` file:
 
-```
+```yml{numberLines: false}
 basket.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
