@@ -9,7 +9,7 @@
     "dotenv": "^8.1.0",
     "gatsby": "^2.15.30",
     "gatsby-image": "^2.2.24",
-    "gatsby-plugin-mdx": "^1.0.64",
+    "gatsby-plugin-mdx": "^2.14.1",
     "gatsby-plugin-react-helmet": "^3.1.10",
     "gatsby-plugin-s3": "^0.3.2",
     "gatsby-plugin-sass": "^2.1.17",
